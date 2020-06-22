@@ -1,0 +1,68 @@
+<h1 id="tableLabel">Thể loại bài hát</h1>
+<ul>Sau đây là danh sách thể loại</ul>
+
+<button class="btn btn-primary" (click) = "openModal(true,null)">Add New Thể loại</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="theloai.totalPage>0">
+    <thead>
+      <tr>
+        <th>Mã thể loại</th>
+        <th>Tên thể loại</th>
+        <th>Ghi Chú</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let TheLoai of theloai.data; index as i">
+        <td>{{ TheLoai.maTheLoai }}</td>
+        <td>{{ TheLoai.tenTheLoai }}</td>
+        <td>{{ TheLoai.ghiChu }}</td>
+        <td>
+          <button class="btn btn-info btm-sm" (click) = "openModal(false,TheLoai)">Edit</button>
+          <button class="btn btn-danger btm-sm" (click) = "deleteTheLoai(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  <ul class="pagination">
+      <li class="page-item">
+          <a href="javascript:void(0);" (click)="SearchPrevious()">Truoc</a>
+      </li>
+      <li class="page-item">{{theloai.page}}</li>
+      <li class="page-item">
+          <a href="javascript:void(0);" (click)="SearchNext()">Sau</a>
+      </li>  
+  </ul>
+  <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" *ngIf = "!isEdit" id="exampleModalLabel">Add New Thể loại</h5>
+          <h5 class="modal-title" *ngIf = "isEdit" id="exampleModalLabel">Edit Thể loại</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row"*ngIf = "!isEdit">
+            <div class="col-4">Mã Thể loại</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="theloais.maTheLoai" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Tên thể loại</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="theloais.tenTheLoai" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ghi chú</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="theloais.ghiChu" ></div>
+          </div>
+          <br/>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click) = "UpdateTheLoai()">Save</button>
+          <button type="button" class="btn btn-success" (click)="addTheLoai()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>

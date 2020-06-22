@@ -1,0 +1,120 @@
+<h1 id="tableLabel">BaiHat</h1>
+<ul>Sau đây là danh sách các bài hát</ul>
+
+<button class="btn btn-primary" (click) = "openModal(true,null)">Add New BaiHat</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="BH.totalPage>0">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Ten Bai Hat</th>
+        <th>Quoc Gia</th>
+        <th>Ten Ca Si</th>
+        <th>Ten The Loai</th>
+        <th>Ghi Chu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let BaiHat of BH.data; index as i">
+        <td>{{ BaiHat.stt }}</td>
+        <td>{{ BaiHat.tenBaiHat }}</td>
+        <td>{{ BaiHat.quocGia }}</td>
+        <td>{{ BaiHat.tenCaSi }}</td>
+        <td>{{ BaiHat.tenTheLoai }}</td>
+        <td>{{ BaiHat.ghiChu }}</td>
+        <td>
+          <button class="btn btn-info btm-sm" (click) = "openModal(false,BaiHat)">Edit</button>
+          <button class="btn btn-danger btm-sm" (click) = "deleteBaiHat(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  <ul class="pagination">
+      <li class="page-item">
+          <a href="javascript:void(0);" (click)="SearchPrevious()">Truoc</a>
+      </li>
+      <li class="page-item">{{BH.page}}</li>
+      <li class="page-item">
+          <a href="javascript:void(0);" (click)="SearchNext()">Sau</a>
+      </li>  
+  </ul>
+  <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" *ngIf = "!isEdit" id="exampleModalLabel">Add New BaiHat</h5>
+          <h5 class="modal-title" *ngIf = "isEdit" id="exampleModalLabel">Edit BaiHat</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row"*ngIf = "!isEdit">
+            <div class="col-4">Ma Bai Hat</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.maBaiHat" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ma Ca Si</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.maCaSi" ></div>
+          </div>
+          <br/>
+          
+          <div class="row">
+            <div class="col-4">Ma The Loai</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.maTheLoai" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ten Bai Hat</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.tenBaiHat" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Quoc Gia</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.quocGia" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">File Loi Bai Hat</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.fileLoiBaiHat" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Link Nhac</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.linkNhac" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ngay Tao</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.ngayTao" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Nguoi Tao</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.nguoiTao" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ngay Chinh Sua</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.ngayChinhSua" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Nguoi Chinh Sua</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.nguoiChinhSua" ></div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-4">Ghi Chu</div>
+            <div class="col-8"><input class="form-control"[(ngModel)]="baihat.ghiChu" ></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click) = "UpdateBaiHat()">Save</button>
+          <button type="button" class="btn btn-success" (click)="addBaiHat()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.BLL.deps.json
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.BLL.dll
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.BLL.runtimeconfig.json
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.BLL.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.BLL.pdb
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.dll
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.pdb
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.Common.dll
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.DAL.dll
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.Common.pdb
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\bin\Debug\netcoreapp3.1\LTCSDL_Music.DAL.pdb
+C:\Users\ASUS\Desktop\LTCSDL_TK73_Nhom16\LTCSDL_Music.BLL\obj\Debug\netcoreapp3.1\LTCSDL_Music.BLL.csproj.CopyComplete
